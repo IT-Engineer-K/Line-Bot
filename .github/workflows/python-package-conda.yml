@@ -9,6 +9,7 @@ name: chatbot
 on:
   schedule:
     - cron: '0 22 * * *'
+    - cron: '1 22 * * *'
     - cron: '0 9 * * *'
 
 jobs:
