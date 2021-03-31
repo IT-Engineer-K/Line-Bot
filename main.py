@@ -3,12 +3,11 @@ from linebot import LineBotApi
 from linebot.models import TextSendMessage
 import datetime
 def format_date(date):
-    __WEEKDAY = ('月','火','水','木','金','土','日')
+    __WEEKDAY = ('火','水','木','金','土','日','月')
     return "%s" % (__WEEKDAY[date.weekday()])
 
 now = datetime.datetime.now()
-print(now.hour)
-if now.hour < 12:
+if now.hour + 9 < 12 or now.hour + 9 > 23:
     time = "朝"
 else:
     time = "夜"
